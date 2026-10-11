@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GreNal Lab — Grêmio & Inter, live and by the numbers</title>
+  <meta name="description" content="GreNal Lab: live Brasileirão scores, tables and match centre, with model-based predictions for Grêmio and Internacional. English / Português.">
+  <meta name="theme-color" content="#eef1f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07080b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon.svg">
+  <link rel="preconnect" href="https://site.api.espn.com" crossorigin>
+  <link rel="preconnect" href="https://a.espncdn.com">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script>
+    // Apply saved theme before first paint to avoid a flash.
+    try { const t = localStorage.getItem('placar.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch {}
+  </script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="topbar glass">
+    <a class="brand" href="#home" aria-label="GreNal Lab">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a78d6"/><stop offset="1" stop-color="#e34948"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><circle cx="16" cy="16" r="8.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M16 11.5l4.3 3.1-1.6 5h-5.4l-1.6-5z" fill="#fff"/></svg>
+      <span class="brand-name">GreNal <em>Lab</em></span>
+    </a>
+    <nav class="nav seg" id="nav" aria-label="Main"></nav>
+    <div class="tools">
+      <span class="status" id="status" aria-live="polite"><span class="pulse off"></span><span class="txt"></span></span>
+      <div class="seg" id="lang" role="group" aria-label="Language">
+        <button data-lang="en">EN</button><button data-lang="pt">PT</button>
+      </div>
+      <button class="icon-btn" id="theme" aria-label="Theme"></button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <nav class="tabbar glass" id="tabbar" aria-label="Main"></nav>
+
+  <footer id="footer"></footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

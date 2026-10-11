@@ -1,0 +1,10 @@
+{
+  "name": "grenal-lab",
+  "private": true,
+  "type": "module",
+  "description": "Static live football dashboard + Dixon–Coles predictions for Grêmio & Internacional. Deploy docs/ to GitHub Pages.",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "backtest": "node scripts/backtest.mjs"
+  }
+}
